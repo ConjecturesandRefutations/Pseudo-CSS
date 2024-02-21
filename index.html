@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Example</title>
+<style>
+  .awb-menu__sub-li {
+    position: relative;
+    display: inline-block;
+    margin-right: 20px; /* Add spacing between menu items */
+  }
+
+  .awb-menu__sub-li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: -3px;
+    height: 2px;
+    background-color: transparent; /* Initially transparent */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    width: 5%;
+  }
+
+  .awb-menu__sub-li:hover::after {
+    background-color: #EB6448; /* Orange color on hover */
+    width: 100%; /* Expand the line to full width */
+  }
+</style>
+</head>
+<body>
+
+<nav class="awb-menu">
+  <ul>
+    <li class="awb-menu__sub-li"><a href="#">Home</a></li>
+    <li class="awb-menu__sub-li"><a href="#">About</a></li>
+    <li class="awb-menu__sub-li"><a href="#">Services</a></li>
+    <li class="awb-menu__sub-li"><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
